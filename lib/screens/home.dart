@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/categorise.dart';
-import 'package:udemy_clone/utils/net_img.dart';
 import 'package:udemy_clone/widgets/reuseable.dart';
-import 'package:udemy_clone/widgets/course_card.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
 import '../widgets/featured_item_lisviewbuilder.dart';
@@ -82,29 +80,35 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
 
+              // management course list
               const SizedBox(height: 20),
-
               FeaturedListView(
                 text: "Top Courses in",
                 category: " Management",
                 bigWidth: false,
               ),
+
+              // business course list
               const SizedBox(height: 20),
               FeaturedListView(
                 text: "Top Courses in",
                 category: " Business",
                 bigWidth: false,
               ),
+
+              // development course list
               const SizedBox(height: 20),
               FeaturedListView(
                 text: "Top Courses in",
                 category: " Development",
                 bigWidth: true,
               ),
+
+              // student searching  course list
               const SizedBox(height: 20),
               FeaturedListView(
-                text: "Student also Searching",
-                category: " ",
+                text: "Student also",
+                category: " Searching",
                 bigWidth: false,
               ),
             ],

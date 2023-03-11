@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/utils/net_img.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
@@ -13,7 +12,7 @@ Widget reminder() => Container(
         children: [
           Container(),
           const Text(
-            "Fluter Ready skill on your schedule!",
+            "Ready skill on your schedule!",
             style: TextStyle(
               color: Colors.white,
             ),
