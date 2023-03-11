@@ -81,8 +81,8 @@ class _MainPageState extends State<MainPage> {
             icon: Padding(
               padding: EdgeInsets.only(bottom: 4),
               child: Icon(
-                Icons.person,
-                size: 30,
+                Icons.account_circle,
+                size: 27,
               ),
             ),
             label: 'Account',
