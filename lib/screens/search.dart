@@ -70,7 +70,17 @@ class _SearchScreenState extends State<SearchScreen> {
                               mainAxisSpacing: 5,
                               crossAxisSpacing: 5),
                       itemBuilder: (context, index) {
-                        return categoriesItem(text: searchTag[index]);
+                        return categoriesItem(
+                          text: searchTag[index],
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const CategorieBasedBrowsePage(),
+                              ),
+                            );
+                          },
+                        );
                       },
                     ),
 

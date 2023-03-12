@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/categorise.dart';
+import 'package:udemy_clone/screens/categorie_based_browsing_screen.dart';
 import 'package:udemy_clone/widgets/reuseable.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
@@ -60,7 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // categories double slider
               doubleHorizontalSlider(
-                  data: categories, height: 110, dataTwo: categoriesTwo),
+                data: categories,
+                height: 110,
+                dataTwo: categoriesTwo,
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const CategorieBasedBrowsePage(),
+                    ),
+                  );
+                },
+              ),
 
               // management course list
               const SizedBox(height: 20),

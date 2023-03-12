@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/utils/net_img.dart';
+import 'package:udemy_clone/widgets/reuseable.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
 class CourseCard extends StatelessWidget {
@@ -33,62 +34,18 @@ class CourseCard extends StatelessWidget {
             size: 16,
             color: AppColors.blackColor,
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 5),
           TextComp(
             text: "Todd Bizer",
             size: 12,
             fontweight: FontWeight.normal,
             color: AppColors.greyColor,
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 5),
 
           // rating comp
-          Row(
-            children: [
-              TextComp(
-                text: "4.5",
-                color: AppColors.goldColor,
-                size: 11,
-              ),
-              const SizedBox(width: 4),
-              Row(
-                children: const [
-                  Icon(
-                    Icons.star,
-                    color: AppColors.goldColor,
-                    size: 12,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: AppColors.goldColor,
-                    size: 12,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: AppColors.goldColor,
-                    size: 12,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: AppColors.goldColor,
-                    size: 12,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: AppColors.goldColor,
-                    size: 12,
-                  ),
-                ],
-              ),
-              const SizedBox(width: 4),
-              TextComp(
-                text: "(1,345)",
-                color: AppColors.goldColor,
-                size: 11,
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
+          ratingComp(),
+          const SizedBox(height: 6),
           TextComp(
             text: "BDT 2,500.00",
             size: 16,

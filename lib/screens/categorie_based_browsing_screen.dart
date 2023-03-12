@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/categorise.dart';
 import 'package:udemy_clone/data/top_instrutorData.dart';
+import 'package:udemy_clone/screens/instructor_profile.dart';
 import 'package:udemy_clone/widgets/course_instructor_reuseable_items.dart';
 import 'package:udemy_clone/widgets/featured_item_lisviewbuilder.dart';
 import 'package:udemy_clone/widgets/reuseable.dart';
@@ -67,7 +68,17 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
             ),
             const SizedBox(height: 10),
             doubleHorizontalSlider(
-                data: categories, height: 110, dataTwo: categoriesTwo),
+              data: categories,
+              height: 110,
+              dataTwo: categoriesTwo,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CategorieBasedBrowsePage(),
+                  ),
+                );
+              },
+            ),
 
             const SizedBox(height: 20),
 
@@ -81,7 +92,17 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
             ),
             const SizedBox(height: 10),
             doubleHorizontalSlider(
-                data: subCategories, height: 110, dataTwo: subCategoriesTwo),
+              data: subCategories,
+              height: 110,
+              dataTwo: subCategoriesTwo,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CategorieBasedBrowsePage(),
+                  ),
+                );
+              },
+            ),
 
             const SizedBox(height: 20),
 
@@ -106,11 +127,27 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      instructorDetailsItem(item: topInstructors[index]),
+                      instructorDetailsItem(
+                        item: topInstructors[index],
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                const InstrutorProfileScreen(),
+                          ));
+                        },
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
-                      instructorDetailsItem(item: topInstructors[index]),
+                      instructorDetailsItem(
+                        item: topInstructors[index],
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                const InstrutorProfileScreen(),
+                          ));
+                        },
+                      ),
                     ],
                   );
                 },
