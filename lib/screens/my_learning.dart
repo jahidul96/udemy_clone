@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/screens/categorie_based_browsing_screen.dart';
+import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/widgets/browse_list_comp.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
@@ -23,7 +25,7 @@ class _MyLearningState extends State<MyLearning> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * .5,
               child: Column(
@@ -45,7 +47,7 @@ class _MyLearningState extends State<MyLearning> {
                   TextComp(
                     text: "Your courses will go here.",
                     fontweight: FontWeight.normal,
-                    color: Colors.grey,
+                    color: AppColors.greyColor,
                   ),
                 ],
               ),
@@ -61,7 +63,13 @@ class _MyLearningState extends State<MyLearning> {
                 size: 18,
               ),
             ),
-            const BrowseListComp(),
+            BrowseListComp(onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const CategorieBasedBrowsePage(),
+                ),
+              );
+            }),
           ],
         ),
       ),

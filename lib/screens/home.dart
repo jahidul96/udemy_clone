@@ -58,27 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
 
-              // categories slider
-              SizedBox(
-                height: 110,
-                child: ListView.separated(
-                  shrinkWrap: true,
-                  padding: const EdgeInsets.only(left: 15, right: 15),
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(width: 5),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        categoriesItem(text: categories[index]),
-                        categoriesItem(text: categories[index]),
-                      ],
-                    );
-                  },
-                ),
-              ),
+              // categories double slider
+              doubleHorizontalSlider(
+                  data: categories, height: 110, dataTwo: categoriesTwo),
 
               // management course list
               const SizedBox(height: 20),
@@ -108,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 20),
               FeaturedListView(
                 text: "Student also",
-                category: " Searching",
+                category: " Search for",
                 bigWidth: false,
               ),
             ],

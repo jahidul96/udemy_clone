@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/browse_categorie.dart';
+import 'package:udemy_clone/screens/categorie_based_browsing_screen.dart';
 import 'package:udemy_clone/utils/resusable_styles.dart';
 import 'package:udemy_clone/widgets/browse_list_comp.dart';
 import 'package:udemy_clone/widgets/reuseable.dart';
@@ -83,7 +84,16 @@ class _SearchScreenState extends State<SearchScreen> {
                         size: 22,
                       ),
                     ),
-                    const BrowseListComp(),
+                    BrowseListComp(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const CategorieBasedBrowsePage(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

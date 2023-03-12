@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/browse_categorie.dart';
 
 class BrowseListComp extends StatelessWidget {
-  const BrowseListComp({super.key});
+  Function()? onTap;
+  BrowseListComp({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class BrowseListComp extends StatelessWidget {
       itemCount: browseCategorie.length,
       itemBuilder: (context, index) {
         return ListTile(
+          onTap: onTap,
           leading: Icon(browseCategorie[index].icon),
           title: Text(
             browseCategorie[index].name,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/screens/categorie_based_browsing_screen.dart';
+import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/widgets/browse_list_comp.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
@@ -23,7 +25,7 @@ class _WishListScreenState extends State<WishListScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * .5,
               child: Column(
@@ -49,7 +51,7 @@ class _WishListScreenState extends State<WishListScreen> {
                   TextComp(
                     text: "Your wishlist will go here.",
                     fontweight: FontWeight.normal,
-                    color: Colors.grey,
+                    color: AppColors.greyColor,
                   ),
                 ],
               ),
@@ -65,7 +67,15 @@ class _WishListScreenState extends State<WishListScreen> {
                 size: 18,
               ),
             ),
-            const BrowseListComp(),
+            BrowseListComp(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CategorieBasedBrowsePage(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),

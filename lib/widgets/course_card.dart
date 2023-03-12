@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/utils/net_img.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
@@ -29,69 +30,68 @@ class CourseCard extends StatelessWidget {
           const SizedBox(height: 8),
           TextComp(
             text: "Product management 101",
-            size: 17,
-            color: Colors.black,
+            size: 16,
+            color: AppColors.blackColor,
           ),
           const SizedBox(height: 8),
           TextComp(
             text: "Todd Bizer",
             size: 12,
             fontweight: FontWeight.normal,
-            color: Colors.grey,
+            color: AppColors.greyColor,
           ),
           const SizedBox(height: 8),
 
           // rating comp
-
           Row(
             children: [
               TextComp(
                 text: "4.5",
-                color: const Color.fromARGB(255, 185, 108, 8),
-                size: 12,
+                color: AppColors.goldColor,
+                size: 11,
               ),
               const SizedBox(width: 4),
               Row(
                 children: const [
                   Icon(
                     Icons.star,
-                    color: Color.fromARGB(255, 185, 108, 8),
-                    size: 13,
+                    color: AppColors.goldColor,
+                    size: 12,
                   ),
                   Icon(
                     Icons.star,
-                    color: Color.fromARGB(255, 185, 108, 8),
-                    size: 13,
+                    color: AppColors.goldColor,
+                    size: 12,
                   ),
                   Icon(
                     Icons.star,
-                    color: Color.fromARGB(255, 185, 108, 8),
-                    size: 13,
+                    color: AppColors.goldColor,
+                    size: 12,
                   ),
                   Icon(
                     Icons.star,
-                    color: Color.fromARGB(255, 185, 108, 8),
-                    size: 13,
+                    color: AppColors.goldColor,
+                    size: 12,
                   ),
                   Icon(
                     Icons.star,
-                    color: Color.fromARGB(255, 185, 108, 8),
-                    size: 13,
+                    color: AppColors.goldColor,
+                    size: 12,
                   ),
                 ],
               ),
               const SizedBox(width: 4),
               TextComp(
                 text: "(1,345)",
-                color: const Color.fromARGB(255, 185, 108, 8),
-                size: 13,
+                color: AppColors.goldColor,
+                size: 11,
               ),
             ],
           ),
           const SizedBox(height: 8),
           TextComp(
             text: "BDT 2,500.00",
-            size: 18,
+            size: 16,
           ),
         ],
       ),

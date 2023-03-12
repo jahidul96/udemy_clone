@@ -1,4 +1,7 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
 import 'course_card.dart';
@@ -29,7 +32,7 @@ class FeaturedListView extends StatelessWidget {
               TextComp(
                 text: category,
                 size: 20,
-                color: Colors.blue,
+                color: AppColors.blueColor,
               ),
             ],
           ),

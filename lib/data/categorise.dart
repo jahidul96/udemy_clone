@@ -6,9 +6,23 @@ List<String> categories = [
   "Office",
 ];
 List<String> categoriesTwo = [
-  "Web Design",
-  "Microsoft",
-  "Digital Items",
-  "LifeStyle",
+  "Web Designs",
+  "Ai Developer",
+  "Digital",
+  "Health's",
+  "Office",
+];
+List<String> subCategories = [
+  "python",
+  "javascript",
+  "java",
+  "next js",
+  "Office",
+];
+List<String> subCategoriesTwo = [
+  "reactJs",
+  "express js",
+  "script",
+  "nest js",
   "Office",
 ];
