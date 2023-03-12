@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/utils/net_img.dart';
+import 'package:udemy_clone/widgets/rating_icon_comp.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
 // reminder comp
@@ -95,42 +96,12 @@ Widget ratingComp() => Row(
           size: 11,
         ),
         const SizedBox(width: 6),
-        ratingIconComp(),
+        fiveIcon(),
         const SizedBox(width: 4),
         TextComp(
           text: "(1,345)",
           color: AppColors.goldColor,
           size: 11,
-        ),
-      ],
-    );
-
-Widget ratingIconComp() => Row(
-      children: const [
-        Icon(
-          Icons.star,
-          color: AppColors.goldColor,
-          size: 12,
-        ),
-        Icon(
-          Icons.star,
-          color: AppColors.goldColor,
-          size: 12,
-        ),
-        Icon(
-          Icons.star,
-          color: AppColors.goldColor,
-          size: 12,
-        ),
-        Icon(
-          Icons.star,
-          color: AppColors.goldColor,
-          size: 12,
-        ),
-        Icon(
-          Icons.star,
-          color: AppColors.goldColor,
-          size: 12,
         ),
       ],
     );

@@ -76,6 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // management course list
               const SizedBox(height: 20),
               FeaturedListView(
+                sliderHeight: 240,
                 text: "Top Courses in",
                 category: " Management",
                 bigWidth: false,
@@ -87,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 text: "Top Courses in",
                 category: " Business",
                 bigWidth: false,
+                sliderHeight: 240,
               ),
 
               // development course list
@@ -95,11 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 text: "Top Courses in",
                 category: " Development",
                 bigWidth: true,
+                sliderHeight: 260,
               ),
 
               // student searching  course list
               const SizedBox(height: 20),
               FeaturedListView(
+                sliderHeight: 240,
                 text: "Student also",
                 category: " Search for",
                 bigWidth: false,

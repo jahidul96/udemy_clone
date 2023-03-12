@@ -8,6 +8,8 @@ class CustomButton extends StatelessWidget {
   double borderWidth;
   Function()? onPressed;
   double height;
+  Color textColor;
+  bool borderSide;
   CustomButton({
     super.key,
     required this.width,
@@ -16,19 +18,27 @@ class CustomButton extends StatelessWidget {
     this.height = 50,
     required this.onPressed,
     required this.text,
+    this.borderSide = true,
+    this.textColor = Colors.black,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
+          elevation: 0,
           minimumSize: Size(width, height),
           backgroundColor: backgroundColor,
-          side: BorderSide(
-            width: borderWidth,
-          ),
+          side: borderSide
+              ? BorderSide(
+                  width: borderWidth,
+                )
+              : BorderSide.none,
         ),
         onPressed: onPressed,
-        child: TextComp(text: text));
+        child: TextComp(
+          text: text,
+          color: textColor,
+        ));
   }
 }

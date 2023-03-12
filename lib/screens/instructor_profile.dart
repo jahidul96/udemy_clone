@@ -43,7 +43,7 @@ class _InstrutorProfileScreenState extends State<InstrutorProfileScreen> {
                 children: [
                   totalStudents(title: "Total Students", total: "1,23456"),
                   const SizedBox(width: 15),
-                  totalStudents(title: "Reviews", total: "567,5675"),
+                  totalStudents(title: "Reviews", total: "5,67675"),
                 ],
               ),
             ),
@@ -101,7 +101,7 @@ class _InstrutorProfileScreenState extends State<InstrutorProfileScreen> {
               physics: const ClampingScrollPhysics(),
               itemCount: 4,
               itemBuilder: (context, index) {
-                return courseDisplayItem();
+                return CourseDisplayItem();
               },
             ),
 

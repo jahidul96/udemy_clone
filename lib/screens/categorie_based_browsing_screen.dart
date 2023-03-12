@@ -21,6 +21,11 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
+        title: TextComp(
+          text: "Development",
+          size: 20,
+        ),
+        titleSpacing: 0,
         actions: [
           IconButton(
             onPressed: () {},
@@ -32,25 +37,20 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TextComp(
-                text: "Development",
-                size: 25,
-              ),
-            ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
 
             // to get started courser
             FeaturedListView(
               text: "Courses to get you started",
               category: "",
               bigWidth: true,
+              sliderHeight: 260,
             ),
 
             const SizedBox(height: 40),
             //featured courses
             FeaturedListView(
+              sliderHeight: 240,
               text: "Featured courses",
               category: "",
               bigWidth: false,
@@ -140,7 +140,7 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
                         height: 20,
                       ),
                       instructorDetailsItem(
-                        item: topInstructors[index],
+                        item: topInstructorsTwo[index],
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) =>
@@ -169,7 +169,7 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
               physics: const ClampingScrollPhysics(),
               itemCount: 10,
               itemBuilder: (context, index) {
-                return courseDisplayItem();
+                return CourseDisplayItem();
               },
             ),
           ],

@@ -10,11 +10,14 @@ class FeaturedListView extends StatelessWidget {
   bool bigWidth;
   String text;
   String category;
-  FeaturedListView(
-      {super.key,
-      required this.text,
-      required this.category,
-      required this.bigWidth});
+  double sliderHeight;
+  FeaturedListView({
+    super.key,
+    required this.text,
+    required this.category,
+    required this.bigWidth,
+    required this.sliderHeight,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +42,7 @@ class FeaturedListView extends StatelessWidget {
         ),
         const SizedBox(height: 15),
         SizedBox(
-          height: 230,
+          height: sliderHeight,
           child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             shrinkWrap: true,

@@ -17,10 +17,11 @@ class AllCourses extends StatelessWidget {
       ),
       body: ListView.builder(
         shrinkWrap: true,
+        padding: const EdgeInsets.only(top: 10),
         physics: const ClampingScrollPhysics(),
         itemCount: 10,
         itemBuilder: (context, index) {
-          return courseDisplayItem();
+          return CourseDisplayItem();
         },
       ),
     );

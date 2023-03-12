@@ -23,6 +23,7 @@ Widget instructorDetailsItem({
                 item.img,
                 width: 60,
                 height: 60,
+                fit: BoxFit.cover,
               ),
             ),
             const SizedBox(width: 10),
@@ -65,8 +66,14 @@ Widget instructorDetailsItem({
 
 // course display card
 
-Widget courseDisplayItem() => Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+class CourseDisplayItem extends StatelessWidget {
+  bool noPaddaing;
+  CourseDisplayItem({super.key, this.noPaddaing = false});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: noPaddaing ? 0 : 10),
       child: Container(
         margin: const EdgeInsets.only(bottom: 15),
         child: Row(
@@ -138,3 +145,5 @@ Widget courseDisplayItem() => Padding(
         ),
       ),
     );
+  }
+}
