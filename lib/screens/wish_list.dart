@@ -16,6 +16,7 @@ class _WishListScreenState extends State<WishListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: TextComp(
           text: "Wishlist",
           size: 20,

@@ -105,3 +105,55 @@ Widget ratingComp() => Row(
         ),
       ],
     );
+
+Widget registerLoginTextContent(
+        {required String text, required String infoText}) =>
+    Center(
+      child: Column(
+        children: [
+          TextComp(
+            text: text,
+            size: 20,
+          ),
+          const SizedBox(height: 4),
+          SizedBox(
+            width: 250,
+            child: TextComp(
+              text: infoText,
+              color: AppColors.greyColor,
+              fontweight: FontWeight.normal,
+              size: 12,
+              align: TextAlign.center,
+            ),
+          )
+        ],
+      ),
+    );
+
+Widget linkTextComp(
+        {required String text,
+        required String linkText,
+        required Function()? onTap}) =>
+    Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextComp(
+          text: text,
+          size: 13,
+          fontweight: FontWeight.normal,
+          color: AppColors.greyColor,
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        InkWell(
+          onTap: onTap,
+          child: TextComp(
+            text: linkText,
+            size: 14,
+            color: AppColors.blueColor,
+          ),
+        ),
+      ],
+    );

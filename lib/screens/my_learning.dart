@@ -16,6 +16,7 @@ class _MyLearningState extends State<MyLearning> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: TextComp(
           text: "My courses",
           size: 20,

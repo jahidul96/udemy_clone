@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/navigation/bottom_nav.dart';
-import 'package:udemy_clone/screens/home.dart';
+import 'package:udemy_clone/screens/auth/login.dart';
+import 'package:udemy_clone/screens/auth/register.dart';
+import 'package:udemy_clone/screens/onboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +31,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const MainPage(),
+      routes: {
+        MainPage.routeName: (context) => const MainPage(),
+        RegisterScreen.routeName: (context) => const RegisterScreen(),
+        LoginScreen.routeName: (context) => const LoginScreen(),
+      },
+      home: const OnboardScreen(),
     );
   }
 }
