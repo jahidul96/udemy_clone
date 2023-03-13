@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/data/section_data.dart';
 import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/utils/net_img.dart';
 import 'package:udemy_clone/widgets/custom_button.dart';
@@ -214,29 +215,6 @@ Widget info({required String label}) => Container(
               color: AppColors.greyColor,
             ),
           )
-        ],
-      ),
-    );
-Widget sectionInfo() => Container(
-      margin: const EdgeInsets.only(bottom: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-            child: TextComp(
-              text:
-                  "Section 1 - Day 1 - Beginner - Working with Variables in Python.",
-              size: 16,
-              color: AppColors.greyColor,
-              fontweight: FontWeight.normal,
-            ),
-          ),
-          const SizedBox(width: 10),
-          const Icon(
-            Icons.add,
-            color: AppColors.blueColor,
-          ),
         ],
       ),
     );

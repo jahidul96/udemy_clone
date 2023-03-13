@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/data/section_data.dart';
 import 'package:udemy_clone/data/simple_data.dart';
 import 'package:udemy_clone/screens/instructor_profile.dart';
 import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/utils/net_img.dart';
 import 'package:udemy_clone/widgets/course_instructor_reuseable_items.dart';
+import 'package:udemy_clone/widgets/curriculam_section_list.dart';
 import 'package:udemy_clone/widgets/custom_button.dart';
 import 'package:udemy_clone/widgets/single_course_details_widgets.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
@@ -79,11 +81,12 @@ class _SingleCourseDetailsState extends State<SingleCourseDetails> {
               ),
               const SizedBox(height: 15),
               ListView.builder(
-                itemCount: 5,
+                itemCount: sectionData.length,
                 shrinkWrap: true,
                 physics: const ClampingScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return sectionInfo();
+                  return CurriculamInfoSection(data: sectionData[index]);
+                  // return sectionInfo(data: sectionData[index]);
                 },
               ),
               CustomButton(

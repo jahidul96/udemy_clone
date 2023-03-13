@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/screens/auth/register.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -71,7 +72,9 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             Center(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, RegisterScreen.routeName);
+                  },
                   child: TextComp(
                     text: "Sign In",
                     color: Colors.blue,
