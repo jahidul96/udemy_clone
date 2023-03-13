@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/categorise.dart';
+import 'package:udemy_clone/data/course_data.dart';
 import 'package:udemy_clone/screens/categorie_based_browsing_screen.dart';
 import 'package:udemy_clone/widgets/reuseable.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
@@ -81,6 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 text: "Top Courses in",
                 category: " Management",
                 bigWidth: false,
+                listData: topcourseData,
               ),
 
               // business course list
@@ -90,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 category: " Business",
                 bigWidth: false,
                 sliderHeight: 240,
+                listData: topcourseData,
               ),
 
               // development course list
@@ -99,6 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 category: " Development",
                 bigWidth: true,
                 sliderHeight: 260,
+                listData: topcourseData,
               ),
 
               // student searching  course list
@@ -108,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 text: "Student also",
                 category: " Search for",
                 bigWidth: false,
+                listData: topcourseData,
               ),
             ],
           ),

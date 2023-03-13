@@ -88,10 +88,10 @@ Widget categoriesItem({required String text, required Function()? onTap}) =>
 
 // rating icon comp
 
-Widget ratingComp() => Row(
+Widget ratingComp({required String rating, required totalReview}) => Row(
       children: [
         TextComp(
-          text: "4.5",
+          text: rating,
           color: AppColors.goldColor,
           size: 11,
         ),
@@ -99,7 +99,7 @@ Widget ratingComp() => Row(
         fiveIcon(),
         const SizedBox(width: 4),
         TextComp(
-          text: "(1,345)",
+          text: "($totalReview)",
           color: AppColors.goldColor,
           size: 11,
         ),

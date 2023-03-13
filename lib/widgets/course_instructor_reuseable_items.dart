@@ -116,7 +116,7 @@ class CourseDisplayItem extends StatelessWidget {
 
                 // rating comp
 
-                ratingComp(),
+                ratingComp(rating: "4", totalReview: "304"),
 
                 const SizedBox(height: 5),
 

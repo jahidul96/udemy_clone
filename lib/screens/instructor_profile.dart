@@ -34,7 +34,7 @@ class _InstrutorProfileScreenState extends State<InstrutorProfileScreen> {
               child: profileTop(),
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
 
             // total students and reviews
             Padding(
@@ -48,25 +48,25 @@ class _InstrutorProfileScreenState extends State<InstrutorProfileScreen> {
               ),
             ),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: TextComp(
                 text: "About me",
-                size: 20,
+                size: 19,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: SizedBox(
                 width: double.maxFinite,
                 child: TextComp(
                   text:
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                      "I am a developer simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
                   size: 16,
-                  color: AppColors.blackColor,
+                  color: AppColors.greyColor,
                   fontweight: FontWeight.w500,
                 ),
               ),
@@ -169,7 +169,7 @@ class _InstrutorProfileScreenState extends State<InstrutorProfileScreen> {
           const SizedBox(height: 7),
           TextComp(
             text: total,
-            size: 18,
+            size: 16,
           ),
         ],
       );

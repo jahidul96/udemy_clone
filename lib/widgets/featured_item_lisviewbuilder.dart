@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/models/course_model.dart';
 import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/widgets/text_comp.dart';
 
@@ -11,12 +12,14 @@ class FeaturedListView extends StatelessWidget {
   String text;
   String category;
   double sliderHeight;
+  List<CourseModel> listData;
   FeaturedListView({
     super.key,
     required this.text,
     required this.category,
     required this.bigWidth,
     required this.sliderHeight,
+    required this.listData,
   });
 
   @override
@@ -47,10 +50,11 @@ class FeaturedListView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: listData.length,
             itemBuilder: (context, index) {
               return CourseCard(
                 bigWidth: bigWidth,
+                courseData: listData[index],
               );
             },
           ),

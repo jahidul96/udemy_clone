@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_clone/models/course_model.dart';
 import 'package:udemy_clone/screens/single_course_details.dart';
 import 'package:udemy_clone/utils/app_colors.dart';
 import 'package:udemy_clone/utils/net_img.dart';
@@ -7,7 +8,8 @@ import 'package:udemy_clone/widgets/text_comp.dart';
 
 class CourseCard extends StatelessWidget {
   bool bigWidth;
-  CourseCard({super.key, required this.bigWidth});
+  CourseModel courseData;
+  CourseCard({super.key, required this.bigWidth, required this.courseData});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class CourseCard extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(5),
               child: Image.network(
-                bannerImg,
+                courseData.coverImg,
                 width: double.infinity,
                 height: bigWidth ? 120 : 86,
                 fit: BoxFit.cover,
@@ -37,13 +39,13 @@ class CourseCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             TextComp(
-              text: "Product management 101",
+              text: courseData.title,
               size: 16,
               color: AppColors.blackColor,
             ),
             const SizedBox(height: 5),
             TextComp(
-              text: "Todd Bizer",
+              text: courseData.instructorName,
               size: 12,
               fontweight: FontWeight.normal,
               color: AppColors.greyColor,
@@ -51,27 +53,43 @@ class CourseCard extends StatelessWidget {
             const SizedBox(height: 5),
 
             // rating comp
-            ratingComp(),
+            ratingComp(
+                rating: courseData.review, totalReview: courseData.totalReview),
             const SizedBox(height: 6),
             TextComp(
-              text: "BDT 2,500.00",
+              text: "BDT " + courseData.courseFee,
               size: 16,
             ),
             const SizedBox(
               height: 10,
             ),
-            Container(
-              color: AppColors.goldColor,
-              width: 70,
-              height: 26,
-              child: Center(
-                child: TextComp(
-                  text: "Best Seller",
-                  size: 10,
-                  color: Colors.white,
-                ),
-              ),
-            )
+            courseData.bestSeller
+                ? Container(
+                    color: AppColors.goldColor,
+                    width: 70,
+                    height: 26,
+                    child: Center(
+                      child: TextComp(
+                        text: "Best Seller",
+                        size: 10,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )
+                : courseData.highRated
+                    ? Container(
+                        color: AppColors.goldColor,
+                        width: 70,
+                        height: 26,
+                        child: Center(
+                          child: TextComp(
+                            text: "High Rated",
+                            size: 10,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    : Container(),
           ],
         ),
       ),

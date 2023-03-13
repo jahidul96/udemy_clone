@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_clone/data/categorise.dart';
+import 'package:udemy_clone/data/course_data.dart';
 import 'package:udemy_clone/data/top_instrutorData.dart';
 import 'package:udemy_clone/screens/instructor_profile.dart';
 import 'package:udemy_clone/widgets/course_instructor_reuseable_items.dart';
@@ -45,6 +46,7 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
               category: "",
               bigWidth: true,
               sliderHeight: 260,
+              listData: topcourseData,
             ),
 
             const SizedBox(height: 40),
@@ -54,6 +56,7 @@ class _CategorieBasedBrowsePageState extends State<CategorieBasedBrowsePage> {
               text: "Featured courses",
               category: "",
               bigWidth: false,
+              listData: topcourseData,
             ),
 
             const SizedBox(height: 20),
